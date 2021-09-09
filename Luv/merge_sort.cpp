@@ -1,3 +1,8 @@
+/* 
+Merge Sort algorithm: break the array into halves until only 1 element remains, then merge them in sorted manner.
+Time Complexity: O(N)*log(N)
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 const int N = 1e5+10;
