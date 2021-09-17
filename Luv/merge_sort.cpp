@@ -41,7 +41,11 @@ void merge(int l, int r, int mid)
             a[i] = R[r_i];
             r_i++;
         }
-    } 
+    }
+    // for understanding purpose
+    for(int i = 0; i<7;i++)
+        cout<<arr[i]<<" ";
+    cout<<endl;
 }
 
 void mergeSort(int l, int r)
@@ -65,9 +69,9 @@ int main()
     }
 
     mergeSort(0,n-1);
-    
-    for(int i=0; i<n;i++){
-        cout << a[i] << " ";
-    }
+    // ouput
+//     for(int i=0; i<n;i++){
+//         cout << a[i] << " ";
+//     }
     
 }
