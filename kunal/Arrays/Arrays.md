@@ -22,12 +22,11 @@
 16. [Transpose Matrix  ✅](https://leetcode.com/problems/transpose-matrix/)
 17. [Add to Array-Form of Integer✅](https://leetcode.com/problems/add-to-array-form-of-integer/)
 18. [Maximum Population Year  ✅](https://leetcode.com/problems/maximum-population-year/)
-19. [Determine Whether Matrix Can Be Obtained By Rotation](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/)
-20. [Two Sum](https://leetcode.com/problems/two-sum/)
+19. [Determine Whether Matrix Can Be Obtained By Rotation✅](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/)
+20. [Two Sum✅](https://leetcode.com/problems/two-sum/)
 21. [Find N Unique Integers Sum up to Zero  ✅](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/)
-22. [Saddle Point In Matrix](https://leetcode.com/problems/lucky-numbers-in-a-matrix/)
-23. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
-24. [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/)
+22. [Maximum Subarray✅](https://leetcode.com/problems/maximum-subarray/)
+23. [Reshape the Matrix ✅](https://leetcode.com/problems/reshape-the-matrix/)
 
 ### Medium
 1. [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
@@ -45,3 +44,4 @@
 3. [Good Array](https://leetcode.com/problems/check-if-it-is-a-good-array/)
 
    
+
