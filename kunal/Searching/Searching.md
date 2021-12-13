@@ -62,4 +62,10 @@
 - [Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/)
 - [Count smaller number after Self](https://leetcode.com/problems/count-of-smaller-numbers-after-self/)
 - [Divide Chocolate Problem](https://curiouschild.github.io/leetcode/2019/06/21/divide-chocolate.html)
+- [T-Primes](https://codeforces.com/problemset/problem/230/B)
+- [Worms](https://codeforces.com/problemset/problem/474/B)
+- [EKO-EKO](https://www.spoj.com/problems/EKO/)
+- [AGGRCOW](https://www.spoj.com/problems/AGGRCOW/)
+- [PIE-PIE](https://www.spoj.com/problems/PIE/)
+- [Minion chef and bananas](https://www.codechef.com/problems/MINEAT)
 
