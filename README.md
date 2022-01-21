@@ -1,4 +1,4 @@
-# DSA practice questions (c++ solution)
+# DSA practice questions (c++ solutions)
 - Kunal
 - Code Studio
 - Luv
