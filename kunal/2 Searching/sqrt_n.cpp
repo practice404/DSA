@@ -1,6 +1,7 @@
 class Solution {
 public:
     int mySqrt(int n) {
+        // taking lo = 0 instead of 1 because if input is INT_MAX then (INT_MAX + 1)/2 cant be stored in int
         int lo = 0, hi = n;
         long long mid = 0;
         while(lo<=hi)

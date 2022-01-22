@@ -15,11 +15,11 @@
 
 1. Location of number in infinite sorted array
 2. How many times the sorted array is rotated
-3. [Square Root](https://leetcode.com/problems/sqrtx/)
-4. [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)
-5. [First Bad Version](https://leetcode.com/problems/first-bad-version/)
-6. [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
-7. [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)
+3. [Square Root](https://leetcode.com/problems/sqrtx/)✅
+4. [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)✅
+5. [First Bad Version](https://leetcode.com/problems/first-bad-version/)✅
+6. [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)✅
+7. [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)✅
 8. [Arranging Coins(Easy)](https://leetcode.com/problems/arranging-coins/)
 9. [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)
 10. [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/)
