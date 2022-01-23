@@ -13,16 +13,16 @@
 
 ## Easy
 
-1. Location of number in infinite sorted array
-2. How many times the sorted array is rotated
+1. [Location of number in infinite sorted array](https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/)✅
+2. [How many times the sorted array is rotated](https://www.geeksforgeeks.org/find-rotation-count-rotated-sorted-array/)✅
 3. [Square Root](https://leetcode.com/problems/sqrtx/)✅
 4. [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/)✅
 5. [First Bad Version](https://leetcode.com/problems/first-bad-version/)✅
 6. [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)✅
 7. [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)✅
-8. [Arranging Coins(Easy)](https://leetcode.com/problems/arranging-coins/)
-9. [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)
-10. [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/)
+8. [Arranging Coins(Easy)](https://leetcode.com/problems/arranging-coins/)✅
+9. [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)✅
+10. [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/)⚠️
 11. [Search Insert Position](https://leetcode.com/problems/search-insert-position/)
 12. [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)
 13. [Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/)
@@ -64,7 +64,6 @@
 - [T-Primes](https://codeforces.com/problemset/problem/230/B)
 - [Worms](https://codeforces.com/problemset/problem/474/B)
 - [EKO-EKO](https://www.spoj.com/problems/EKO/)
-- [AGGRCOW](https://www.spoj.com/problems/AGGRCOW/)
 - [PIE-PIE](https://www.spoj.com/problems/PIE/)
 - [Minion chef and bananas](https://www.codechef.com/problems/MINEAT)
 
