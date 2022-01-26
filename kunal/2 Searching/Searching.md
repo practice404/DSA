@@ -22,15 +22,15 @@
 7. [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/)✅
 8. [Arranging Coins(Easy)](https://leetcode.com/problems/arranging-coins/)✅
 9. [Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)✅
-10. [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/)⚠️
+10. [Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/)✅
 11. [Search Insert Position](https://leetcode.com/problems/search-insert-position/)✅
 12. [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array/)✅
 13. [Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/)✅
-14. [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
-15. [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
-16. [Fair Candy Swap](https://leetcode.com/problems/fair-candy-swap/)
+14. [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)✅
+15. [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)✅
+16. [Fair Candy Swap](https://leetcode.com/problems/fair-candy-swap/)⚠️
 17. [Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/)✅
-18. [Special Array With X Elements Greater Than or Equal X](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/)
+18. [Special Array With X Elements Greater Than or Equal X](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/)✅
 19. [Binary Search](https://leetcode.com/problems/binary-search/)✅
 
 ## Medium
