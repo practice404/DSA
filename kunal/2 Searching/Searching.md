@@ -28,14 +28,14 @@
 13. [Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/)✅
 14. [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)✅
 15. [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/)✅
-16. [Fair Candy Swap](https://leetcode.com/problems/fair-candy-swap/)⚠️
+16. [Fair Candy Swap](https://leetcode.com/problems/fair-candy-swap/)✅
 17. [Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/)✅
 18. [Special Array With X Elements Greater Than or Equal X](https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/)✅
 19. [Binary Search](https://leetcode.com/problems/binary-search/)✅
 
 ## Medium
-1. [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
-2. [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)
+1. [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)✅
+2. [Single Element in a Sorted Array](https://leetcode.com/problems/single-element-in-a-sorted-array/)✅
 3. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 4. [Search in Rotated Sorted Array II](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)
 5. [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
@@ -45,10 +45,10 @@
 9. [Maximum Value at a Given Index in a Bounded Array](https://leetcode.com/problems/maximum-value-at-a-given-index-in-a-bounded-array/)
 10. [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 11. [Minimum Absolute Sum Difference](https://leetcode.com/problems/minimum-absolute-sum-difference/)
-12. [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
+12. [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)✅
 13. [Find a Peak Element II](https://leetcode.com/problems/find-a-peak-element-ii/)
 14. [Frequency of the Most Frequent Element](https://leetcode.com/problems/frequency-of-the-most-frequent-element/)
-15. [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+15. [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) :  (cycle sort)
 16. [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/)
 17. [4 Sum](https://leetcode.com/problems/4sum/)
 

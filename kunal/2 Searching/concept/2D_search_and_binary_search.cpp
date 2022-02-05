@@ -35,12 +35,11 @@ pair<int,int> matrix_binary_search(vector<vector<int>> & v, int target)
 
 	while(rstart < rend)
 	{
-		int mid_col = (cstart+cend)/2;
 		int mid_row = (rstart+rend)/2;
 
-		if(v[mid_row][mid_col] == target)
-			return {mid_row,mid_col};
-		else if(v[mid_row][mid_col] < target)
+		if(v[mid_row][cend] == target)
+			return {mid_row,cend};
+		else if(v[mid_row][cend] < target)
 			rstart = mid_row + 1;
 		else
 			rend = mid_row - 1;
