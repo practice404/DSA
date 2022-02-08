@@ -6,15 +6,15 @@ using namespace std;
 
 void cycle_sort(vector<int> &v)
 {
-	size_t n = v.size();
-
-	for(size_t i = 0; i < n - 1; ++i)
-	{
-		while(v[i] != i+1) // since in sorted (index = value - 1)
-		{
-			swap(v[i], v[v[i]-1]);
-		}
-	}
+	int i = 0;
+    while( i < nums.size())
+    {
+        int correct_index = nums[i] - 1;
+        if(nums[i] > 0 && nums[i] < nums.size() && nums[i] != nums[correct_index])
+            swap(nums[i], nums[correct_index]);
+        else
+            i++;
+    }
 }
 
 int main()
