@@ -18,7 +18,7 @@ int fun(int n)
         if(F[n-2] == -1)
             F[n-2] = fun(n-2);
     }
-
+    F[n] = F[n-1] + F[n-2];
     return F[n-1]+F[n-2];
 }
 
