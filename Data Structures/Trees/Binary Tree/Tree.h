@@ -3,7 +3,7 @@
 
 #include "Node.h"
 #include<queue>
-#include<vector>
+#include<cassert>
 #include<stack>
 
 template <typename T>
@@ -20,6 +20,8 @@ public:
 	void iter_inorder();
 	void iter_postorder();
 	void levelorder();
+	Node<T> * generate_tree_from_traversal(T *in_order, T *pre_order, int start, int end);
+	size_t search(T * arr, int start, int end, T data);
 };
 
 template <typename T>
@@ -189,4 +191,38 @@ void Tree<T>::levelorder()
 	}
 }
 
+template <typename T>
+size_t Tree<T>::search(T * arr, int start, int end, T data)
+{
+	for(int i = start; i<= end; i++)
+	{
+		if(arr[i] == data)
+			return i;
+	}
+	return -1;
+}
+
+template <typename T>
+Node<T>* Tree<T>::generate_tree_from_traversal(T *inorder, T *preorder, int inStart, int inEnd) 
+{
+    static int preIndex = 0;
+ 
+    if (inStart > inEnd)
+    {
+        return nullptr;
+    }
+ 
+    Node<T>* node = new Node<T>(preorder[preIndex++]);
+ 
+    if (inStart == inEnd)
+    {
+        return node;
+    }
+ 
+    int splitIndex = search(inorder, inStart, inEnd, node->data);
+    node->lchild = generate_tree_from_traversal(inorder, preorder, inStart, splitIndex-1);
+    node->rchild = generate_tree_from_traversal(inorder, preorder, splitIndex+1, inEnd);
+ 
+    return node;
+}
 #endif
