@@ -1,111 +1,113 @@
-#ifndef CODE_Stack
-#define CODE_Stack
+#ifndef STACK_H
+#define STACK_H
 
 #include "Node.h"
-#include <iostream>
-#include <cassert>
-#include <string>
+#include<iostream>
+#include<cassert>
 
-namespace sway
+template <typename T>
+class Stack
 {
+private:
+	Node<T> * Top {nullptr};
+	int size {};
 
-    template <typename T = int>
-    class Stack
-    {
-        private:
-            std::shared_ptr<Node<T>> head;
+public:
+	Stack() = default;
+	void display() const;
+	~Stack();
+	void push(T data);
+	T pop();
+	T top() const;
+	bool isempty() const;
+	bool isfull() const;
+	
 
-        public:
-            // constructors
-            Stack() = default;
-            ~Stack();
+	//friend function
+	friend std::ostream & operator << (std::ostream & os, const Stack<T> & source)
+	{
+		Node<T> * t = source.head;
+		while(t != nullptr)
+		{
+			os<<t->data <<" - ";
+			t = t->next; 
+		}
+		os << std::endl;
+		return os;
+	}
 
-            //getters
-            std::shared_ptr<Node<T>> get_head() const;
+};
 
-            // helper functions
-            void push(const T & data);
-            void pop();
-            bool empty() const;
-            T top() const;
+template <typename T>
+void Stack<T>::display() const
+{
+	Node<T> * t = Top;
+	while(t != nullptr)
+	{
+		std::cout << t->data <<" - ";
+		t = t->next; 
+	}
+	std::cout<<std::endl;
+}
 
-            // friend functions 
-            friend std::ostream & operator << (std::ostream & out, const Stack & source)
-            {
-                std::shared_ptr<Node<T>> temp = source.head;
-                while(temp != nullptr)
-                {
-                    out << temp->get_data() << " | ";
-                    temp = temp->get_next_node();
-                }
-                out << std::endl;
-                temp.reset();
-                return out;
-            }
+template <typename T>
+void Stack<T>::push(T data)
+{
+	if(Top == nullptr)
+	{
+		Top = new Node(data);
+		return;
+	}
 
-            friend std::istream & operator >> (std::istream & in, Stack & source)
-            {
-                size_t size;
-                in >> size;
-                while(size--)
-                {
-                    T item;
-                    in >> item;
-                    source.push(item);
-                }
-                return in;
-            }
-    };
+	Node<T> * p;
+	p = new Node(data);
+	p->next = Top;
+	Top = p;
+	size++;
+}
 
-    template <typename T>
-    Stack<T>::~Stack()
-    {
-        head.reset();
-    }
+template <typename T>
+T Stack<T>::pop()
+{
+	Node<T> *p = Top;
+	Top = Top->next;
+	p->next = nullptr;
+	T value = p->data;
+	delete p;
+	size--;
+	return value;
+}
 
-    template <typename T>
-    std::shared_ptr<Node<T>> Stack<T>::get_head() const
-    {
-        return head;
-    }
+template <typename T>
+T Stack<T>::top() const
+{
+	return Top->data;
+}
 
-    template <typename T>
-    void Stack<T>::push(const T & data)
-    {
-        std::shared_ptr<Node<T>> temp = std::make_shared<Node<T>> (Node<T>(data));
-        if(head == nullptr)
-        {
-            head = temp;
-        }
-        else
-        {
-            temp->set_next_node(head);
-            head = temp;
-        }
+template <typename T>
+bool Stack<T>::isempty() const
+{
+	if(Top == nullptr)
+		return true;
+	return false;
+}
 
-        temp.reset();
-    }
+template <typename T>
+bool Stack<T>::isfull() const	
+{
+	Node<T> * p = new(std::nothrow) Node<T>();
+	if(p == nullptr)
+		return true;
+	return false;
+}
 
-    template <typename T>
-    void Stack<T>::pop()
-    {
-        std::shared_ptr<Node<T>> temp = head;
-        head = head->get_next_node();
-        temp->reset_next_node();
-        temp.reset();
-    }
-
-    template <typename T>
-    bool Stack<T>::empty() const
-    {
-        return !(static_cast<bool>(head)); // we can cast smart pointers as
-    }
-
-    template <typename T>
-    T Stack<T>::top() const
-    {
-        return head->get_data();
-    }
+template <typename T>
+Stack<T>::~Stack()
+{
+	if(Top != nullptr)
+	{
+		delete Top;
+	}
 }
 
 

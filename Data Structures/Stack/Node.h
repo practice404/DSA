@@ -1,71 +1,33 @@
-#ifndef CODE_NODE
-#define CODE_NODE
+#ifndef NODE_H
+#define NODE_H
 
-#include <memory>
-namespace sway
+
+template <typename T>
+class Node
 {
+public:
+	Node<T> * next {nullptr};
+	T data {};
 
-    template <typename T = int >
-    class Node
-    {
-        private:
-            T data;
-            std::shared_ptr<Node<T>> next_node;
+public:
+	Node() = default;
+	Node(T data);
+	~Node();
+};
 
-        public:
-            // constructors
-            Node() = default;
-            Node(T item);
-            // destructor
-            ~Node();
-            // getters
-            T get_data() const;
-            std::shared_ptr<Node<T>> get_next_node() const;
-            //setters
-            void set_data(T & item);
-            void set_next_node(std::shared_ptr<Node<T>> & next);
-            void reset_next_node();
 
-    };
-    template <typename T>
-    Node<T>::Node(T item) : data(item)
-    {}
+template <typename T>
+Node<T>::Node(T data) : data(data), next(nullptr)
+{}
 
-    template <typename T>
-    Node<T>::~Node()
-    {
-        this->next_node.reset();
-    }
-
-    template <typename T>
-    T Node<T>::get_data() const
-    {
-        return this->data;
-    }
-
-    template <typename T>
-    std::shared_ptr<Node<T>> Node<T>::get_next_node() const
-    {
-        return this->next_node;
-    }
-
-    template <typename T>
-    void Node<T>::set_data(T & item)
-    {
-        this->data = item;
-    }
-
-    template <typename T>
-    void Node<T>::set_next_node(std::shared_ptr<Node<T>> & next)
-    {
-        this->next_node = next;
-    }
-
-    template <typename T>
-    void Node<T>::reset_next_node()
-    {
-        this->next_node.reset();
-    }
+template <typename T>
+Node<T>::~Node()
+{
+	if(next != nullptr)
+	{
+		delete next;
+	}
+	// std::cout<<"memory released of: "<<data<<"\n";
 }
 
 #endif
