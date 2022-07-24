@@ -12,6 +12,8 @@ class Tree
 public:
 	Node<T> * root = nullptr;
 
+	Tree() = default;
+	~Tree();
 	void create_tree();
 	void preorder(Node<T> * p);
 	void inorder(Node<T> * p);
@@ -111,6 +113,7 @@ void Tree<T>::iter_preorder()
 			p = p->rchild;
 		}
 	}
+	std::cout<<std::endl;
 }
 template <typename T>
 void Tree<T>::iter_inorder()
@@ -133,6 +136,7 @@ void Tree<T>::iter_inorder()
 			p = p->rchild;
 		}
 	}
+	std::cout<<std::endl;
 }
 
 template <typename T>
@@ -165,6 +169,7 @@ void Tree<T>::iter_postorder()
 			}
 		}
 	}
+	std::cout<<std::endl;
 }
 
 template <typename T>
@@ -189,6 +194,7 @@ void Tree<T>::levelorder()
 			q.pop();
 		}
 	}
+	std::cout<<std::endl;
 }
 
 template <typename T>
@@ -225,4 +231,39 @@ Node<T>* Tree<T>::generate_tree_from_traversal(T *inorder, T *preorder, int inSt
  
     return node;
 }
+
+template <typename T>
+Tree<T>::~Tree()
+{
+	Node<T> * p = root;
+	std::stack<long int> st;
+
+	while(p || !st.empty())
+	{
+		if(p)
+		{
+			st.push(reinterpret_cast<long int>(p));
+			p = p->lchild;
+		}
+		else
+		{
+			long int t = st.top();
+			st.pop();
+
+			if(t > 0)
+			{
+				st.push(-t);
+				p = ((Node<T>*)t)->rchild;
+			}
+			else
+			{
+				p = (reinterpret_cast<Node<T>*>(-1*t));
+				delete p;
+				p = nullptr;
+			}
+		}
+	}
+	// std::cout<<"\ntree deleted";
+}
+
 #endif
