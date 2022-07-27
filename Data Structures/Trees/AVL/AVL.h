@@ -19,6 +19,9 @@ public:
 	Node * LR_rotation(Node * p);
 	Node * RR_rotation(Node * p);
 	Node * RL_rotation(Node * p);
+	Node * in_pred(Node *p);
+	Node * in_succ(Node *p);
+	Node * remove(Node * p, int key);
 };
 
 void AVL::inorder()
@@ -162,6 +165,72 @@ Node * AVL::insert(Node * p, int key)
 		return RR_rotation(p);
 	else if(bf == -2 && balance_factor(p->rchild) == 1)
 		return RL_rotation(p);
+
+	return p;
+}
+
+Node * AVL::in_pred(Node *p)
+{
+	if(p->rchild == nullptr)
+		return p;
+	return in_pred(p->rchild);
+
+}
+
+Node * AVL::in_succ(Node *p)
+{
+	if(p->lchild == nullptr)
+		return p;
+	return in_succ(p->lchild);
+}
+
+Node * AVL::remove(Node * p, int key)
+{
+	if(!p)
+		return  nullptr;
+	if(p->lchild == nullptr && p->rchild == nullptr)
+	{
+		if(p == this->root)
+			root = nullptr;
+		delete p;
+		return nullptr;
+	}
+
+	if(key < p->data)
+		p->lchild = remove(p->lchild, key);
+	else if(key > p->data)
+		p->rchild = remove(p->rchild, key);
+	else
+	{
+		if(node_height(p->lchild) > node_height(p->rchild))
+		{
+			Node * succ = in_succ(p->rchild);
+			p->data = succ->data;
+			p->rchild = remove(p->rchild, succ->data);
+		}
+		else
+		{
+			Node * pred = in_pred(p->lchild);
+			p->data = pred->data;
+			p->lchild = remove(p->lchild, pred->data);
+		}
+	}
+
+	// because of deletion, height of p will be changed
+	p->height = node_height(p);
+
+	if(balance_factor(p) == 2 && balance_factor(p->lchild) == 1) // L1
+		return LL_rotation(p);
+	else if(balance_factor(p) == 2 && balance_factor(p->lchild) == -1) // L -1
+		return LR_rotation(p);
+	else if(balance_factor(p) == 2 && balance_factor(p->lchild) == 0) //  L0
+		return LL_rotation(p);
+	else if(balance_factor(p) == -2 && balance_factor(p->rchild) == 1) //  R1
+		return RL_rotation(p);
+	else if(balance_factor(p) == -2 && balance_factor(p->rchild) == -1) //  R-1
+		return RR_rotation(p);
+	else if(balance_factor(p) == -2 && balance_factor(p->rchild) == 0) //  R0
+		return RR_rotation(p);
 
 	return p;
 }
